@@ -76,7 +76,7 @@ function init() {
          const outputPath = path.join(outputFolder, "README.md");
          writeToFile(outputPath, readmeContent);
 
-         console.log('README.md successfully generated in the "output" folder!');
+         console.log('README.md file is successfully generated in the "output" folder!');
       })
       .catch((error) => {
          console.error("Error during inquirer prompts:", error);
