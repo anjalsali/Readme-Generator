@@ -4,6 +4,10 @@
 
 When creating an open source project on GitHub, it's important to have a high-quality README for the app. This command-line application helps you quickly generate a professional README.md file by dynamically taking user input. This allows you to focus more on your project rather than spending time on documentation.
 
+Image showing command line promt of Readme-Generator application.
+
+![Image showing readme-generator command line](./assets/image/readme_generator.png)
+
 ## Installation
 
 To install the Professional README Generator, follow these steps:
