@@ -25,7 +25,7 @@ ${data.installation}
 ${data.usage}
 
 ## License
-This project is licensed under the ${data.license} license. See the [LICENSE](./LICENSE) file for details.
+This project is licensed under the ${data.license} license. See the [Licensing a repository](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository) page for details.
 
 ## Contributing
 ${data.contributing}
