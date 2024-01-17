@@ -54,10 +54,34 @@ const questions = [
 ];
 
 // function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+   fs.writeFileSync(fileName, data);
+}
 
 // function to initialize program
-function init() {}
+function init() {
+   inquirer
+      .prompt(questions)
+      .then((answers) => {
+         // Generate README content using the external function
+         const readmeContent = generateMarkdown(answers);
+
+         // Create "output" folder if it doesn't exist
+         const outputFolder = path.join(process.cwd(), "output");
+         if (!fs.existsSync(outputFolder)) {
+            fs.mkdirSync(outputFolder);
+         }
+
+         // Write to README.md file inside the "output" folder
+         const outputPath = path.join(outputFolder, "README.md");
+         writeToFile(outputPath, readmeContent);
+
+         console.log('README.md successfully generated in the "output" folder!');
+      })
+      .catch((error) => {
+         console.error("Error during inquirer prompts:", error);
+      });
+}
 
 // function call to initialize program
 init();
